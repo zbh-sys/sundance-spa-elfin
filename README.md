@@ -1,3 +1,5 @@
+> **Fork note (zbh-sys):** this fork adds Sundance 680 support on top of upstream 1.4.4: °F boards are detected automatically (raw temperature > 80), current/set temperature decode and encode in whole °F with ±1 °F steps, the light uses the 680 panel code (243), pump 1 exposes low and high speed (`Pumpe 1 niedrig` / `Pumpe 1`) with press-until-state switching, and a `Display-Code` diagnostic sensor records the raw status for decoding error codes. Upstream issue: Qlimuli/sundance-spa-elfin#11.
+
 # Sundance / Balboa Spa – Home Assistant Integration
 
 Home-Assistant-Integration für Sundance-/Balboa-Whirlpools über einen RS485-TCP-Adapter (z. B. ESPHome, ser2net).
