@@ -38,37 +38,37 @@ class SpaSwitch:
 
 SWITCH_TYPES: list[SpaSwitch] = [
     SpaSwitch(
-        key="pump1", name="Pumpe 1",
+        key="pump1", name="Pump 1 high (jets)",
         icon_on="mdi:pump", icon_off="mdi:pump-off",
         button=BTN_PUMP1,
         getter=lambda s: s["pump1"],
     ),
     SpaSwitch(
-        key="pump1_low", name="Pumpe 1 niedrig",
+        key="pump1_low", name="Pump 1 low (circulation)",
         icon_on="mdi:pump", icon_off="mdi:pump-off",
         button=BTN_PUMP1,
         getter=lambda s: s.get("pump1_low", False),
     ),
     SpaSwitch(
-        key="pump2", name="Pumpe 2",
+        key="pump2", name="Pump 2",
         icon_on="mdi:pump", icon_off="mdi:pump-off",
         button=BTN_PUMP2,
         getter=lambda s: s["pump2"],
     ),
     SpaSwitch(
-        key="circ", name="Auto-Zirkulation",
+        key="circ", name="Auto circulation",
         icon_on="mdi:rotate-right", icon_off="mdi:rotate-right",
         button=BTN_ZIRK,
         getter=lambda s: s["circ"],
     ),
     SpaSwitch(
-        key="clearray", name="Wasserfall-manuell",
+        key="clearray", name="Waterfall (manual)",
         icon_on="mdi:uv-fast", icon_off="mdi:uv-fast",
         button=BTN_CLEARRAY,
         getter=lambda s: s["circ_manual"],
     ),
     SpaSwitch(
-        key="blower", name="Blubber / Luftsprudel",
+        key="blower", name="Blower / air bubbles",
         icon_on="mdi:weather-windy",
         icon_off="mdi:weather-windy-variant",
         button=0,

@@ -1,7 +1,7 @@
 {
   "domain": "sundance_spa",
   "name": "Sundance Spa Cameo 880 (RS485-TCP)",
-  "version": "1.4.4.1",
+  "version": "1.4.4.2",
   "documentation": "https://github.com/zbh-sys/sundance-spa-elfin",
   "issue_tracker": "https://github.com/zbh-sys/sundance-spa-elfin/issues",
   "dependencies": [],

@@ -35,7 +35,7 @@ class SpaLight(CoordinatorEntity, LightEntity):
     """RGB-Licht-Entität für den Whirlpool."""
 
     _attr_has_entity_name       = True
-    _attr_name                  = "Licht"
+    _attr_name                  = "Light"
     _attr_color_mode            = ColorMode.BRIGHTNESS
     _attr_supported_color_modes = {ColorMode.BRIGHTNESS}
     _attr_supported_features    = LightEntityFeature.EFFECT

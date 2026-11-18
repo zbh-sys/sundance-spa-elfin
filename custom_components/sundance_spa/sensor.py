@@ -34,7 +34,7 @@ class SpaSensorDescription:
 
 SENSOR_TYPES: list[SpaSensorDescription] = [
     SpaSensorDescription(
-        key="cur_temp", name="Ist-Temperatur",
+        key="cur_temp", name="Water temperature",
         icon="mdi:thermometer-water",
         getter=lambda s, _l: s.get("cur_temp"),
         unit=UnitOfTemperature.CELSIUS,
@@ -42,7 +42,7 @@ SENSOR_TYPES: list[SpaSensorDescription] = [
         state_class=SensorStateClass.MEASUREMENT,
     ),
     SpaSensorDescription(
-        key="set_temp", name="Soll-Temperatur",
+        key="set_temp", name="Set temperature",
         icon="mdi:thermometer-chevron-up",
         getter=lambda s, _l: s.get("set_temp"),
         unit=UnitOfTemperature.CELSIUS,
@@ -50,35 +50,35 @@ SENSOR_TYPES: list[SpaSensorDescription] = [
         state_class=SensorStateClass.MEASUREMENT,
     ),
     SpaSensorDescription(
-        key="heat_mode", name="Heizmodus",
+        key="heat_mode", name="Heat mode",
         icon="mdi:water-boiler",
         getter=lambda s, _l: s.get("heat_mode"),
     ),
     SpaSensorDescription(
-        key="spa_time", name="Spa-Uhrzeit",
+        key="spa_time", name="Spa clock",
         icon="mdi:clock-outline",
         getter=lambda s, _l: s.get("time"),
         category=EntityCategory.DIAGNOSTIC,
     ),
     SpaSensorDescription(
-        key="display", name="Display-Status",
+        key="display", name="Display status",
         icon="mdi:monitor",
-        getter=lambda s, _l: "Menü aktiv" if s.get("in_menu") else "Normal",
+        getter=lambda s, _l: "Menu open" if s.get("in_menu") else "Normal",
         category=EntityCategory.DIAGNOSTIC,
     ),
     SpaSensorDescription(
-        key="display_code", name="Display-Code",
+        key="display_code", name="Display code",
         icon="mdi:alert-circle-outline",
         getter=lambda s, _l: s.get("display_code"),
         category=EntityCategory.DIAGNOSTIC,
     ),
     SpaSensorDescription(
-        key="light_mode", name="Licht-Modus",
+        key="light_mode", name="Light mode",
         icon="mdi:lightbulb-variant-outline",
-        getter=lambda _s, l: l.get("mode", "Unbekannt") if l else "Unbekannt",
+        getter=lambda _s, l: l.get("mode", "Unknown") if l else "Unknown",
     ),
     SpaSensorDescription(
-        key="light_color", name="Licht-Farbe (HEX)",
+        key="light_color", name="Light color (hex)",
         icon="mdi:palette",
         getter=lambda _s, l: (
             f"#{l['r']:02X}{l['g']:02X}{l['b']:02X}"
@@ -89,7 +89,7 @@ SENSOR_TYPES: list[SpaSensorDescription] = [
     ),
     # Neu: Licht-Helligkeit als eigener Sensor
     SpaSensorDescription(
-        key="light_brightness", name="Licht-Helligkeit",
+        key="light_brightness", name="Light brightness",
         icon="mdi:brightness-6",
         getter=lambda _s, l: l.get("brightness") if l else None,
         unit="%",
