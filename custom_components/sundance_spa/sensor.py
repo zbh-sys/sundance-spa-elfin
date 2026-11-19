@@ -63,7 +63,7 @@ SENSOR_TYPES: list[SpaSensorDescription] = [
     SpaSensorDescription(
         key="display", name="Display status",
         icon="mdi:monitor",
-        getter=lambda s, _l: "Menu open" if s.get("in_menu") else "Normal",
+        getter=lambda s, _l: "ClearRay" if s.get("display_code") == 10 else ("Menu open" if s.get("in_menu") else "Normal"),
         category=EntityCategory.DIAGNOSTIC,
     ),
     SpaSensorDescription(

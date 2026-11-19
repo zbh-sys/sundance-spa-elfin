@@ -80,6 +80,8 @@ BTN_BLOWER         = 237   # Klartext NICHT verwenden – steuert Pumpen; siehe 
 HEAT_MODE_MAP = {32: "AUTO", 34: "ECO", 36: "DAY"}
 
 DISPLAY_MAP = {
+    10: "ClearRay",        # Sundance 680: ClearRay UV running (normal)
+    11: "Normal",          # Sundance 680: idle home screen
     22: "Set temp change",
     23: "Water temp",
     30: "Set temp",
